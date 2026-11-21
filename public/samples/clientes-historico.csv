@@ -1,0 +1,6 @@
+cliente_id,nombre,fecha_alta,estado,saldo_centavos
+C001,Ana Ruiz,2019-03-12,03,150050
+C002,Luis Mora,2021-07-01,03,2500
+C003,Marta Gil,2018-11-20,01,9900
+C004,Elena Paz,2020-01-01,03,10000
+C005,Hugo Bel,2016-05-22,02,0

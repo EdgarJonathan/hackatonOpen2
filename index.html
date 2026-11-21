@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LegacyBridge AI</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <p class="eyebrow">Hackathon Open2 · Legacy</p>
+        <h1>LegacyBridge AI</h1>
+        <p class="tagline">El operador enseña, la IA construye y el sistema migra.</p>
+      </header>
+
+      <ol class="steps" aria-label="Pasos de la migración">
+        <li class="step is-current"><span>1</span>Cargar datos</li>
+        <li class="step"><span>2</span>Enseñar reglas</li>
+        <li class="step"><span>3</span>Revisar y aprobar</li>
+        <li class="step"><span>4</span>Exportar JSON</li>
+        <li class="step"><span>5</span>Reutilizar</li>
+      </ol>
+
+      <main class="layout">
+        <section class="panel">
+          <h2>1. Cargar el archivo antiguo</h2>
+          <p class="lead">
+            Empieza con el archivo que ya usa el operador. No hace falta conocer la estructura:
+            LegacyBridge muestra las columnas y propone a qué campo del sistema nuevo corresponde cada una.
+          </p>
+
+          <div class="actions">
+            <button type="button" class="primary" id="demo-button">Usar CSV de demostración</button>
+            <label class="file-button">
+              Cargar mi CSV
+              <input id="file-input" type="file" accept=".csv,text/csv" />
+            </label>
+          </div>
+          <p class="error" id="error" hidden></p>
+
+          <div id="preview" hidden>
+            <div class="file-meta">
+              <strong id="file-name"></strong>
+              <span id="file-stats"></span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead id="table-head"></thead>
+                <tbody id="table-body"></tbody>
+              </table>
+            </div>
+            <p class="hint" id="table-hint" hidden></p>
+          </div>
+          <p class="empty" id="empty">Todavía no hay un archivo cargado.</p>
+        </section>
+
+        <aside class="panel side">
+          <h2>Formato de destino</h2>
+          <p class="target-name" id="target-name"></p>
+          <p id="target-description"></p>
+          <ul class="field-list" id="field-list"></ul>
+
+          <h3>Propuesta inicial de columnas</h3>
+          <ul class="mapping-list" id="mapping-list"></ul>
+          <p class="hint" id="mapping-empty">Aparece cuando cargues un archivo.</p>
+          <p class="hint">
+            Esta propuesta solo relaciona nombres. El significado de los códigos, como el estado 03, se enseña en el siguiente paso.
+          </p>
+          <button type="button" class="primary" id="next-button" disabled>Siguiente: enseñar las reglas</button>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+cliente_id,nombre,fecha_alta,estado,saldo_centavos
+C010,Pedro Díaz,2017-01-05,03,100
+C011,Sofía Lan,2024-02-14,03,45075
+C012,Iván Cruz,2020-06-01,01,0
+C013,Nora Vidal,2019-12-31,03,250000
